@@ -28,5 +28,5 @@ cat wages.csv | cut -d ',' -f 1,2 | tr ',' '\t' | egrep "male" | sort -V | uniq 
 val1=$(cat wages.csv | cut -d ',' -f 3,4 | egrep "^16" | sort | head -n 1 | cut -d ',' -f 2)
 val2=$(cat wages.csv | cut -d ',' -f 3,4 | egrep "^12" | sort | head -n 1 | cut -d ',' -f 2)
 echo ''
-echo 'the effect of graduating college is'
-echo "$val1 - $val2" | bc
+echo 'the effect of graduating college is a minimum wage increase in $ of:'
+echo "$val1 - $val2" | bc 
