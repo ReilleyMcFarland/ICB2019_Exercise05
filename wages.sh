@@ -1,4 +1,4 @@
-#<<<<<<< HEAD
+
 cat wages.csv | cut -d ',' -f 1,2 | tr ',' '\t' | sort -V > wages.txt
 echo "the gender of the highest earner is a:" ""
 sort -t, -k4,4 -nr wages.csv | head -n 1 | cut -d ',' -f1
@@ -22,8 +22,7 @@ echo "The following represents the number of females in the top 10 earners:"
 sort -t, -k4,4 -nr wages.csv | head -n 10 | egrep "female" | wc -l
 
 
-#=======
 cat wages.csv | cut -d ',' -f 1,2 | tr ',' '\t' | egrep "male" | sort -V | uniq > wages.txt
-#>>>>>>> 84f8b3f5d082f38518d8c0a5bd155572daf8e315
+
 
 
