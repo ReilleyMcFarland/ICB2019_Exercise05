@@ -25,4 +25,4 @@ sort -t, -k4,4 -nr wages.csv | head -n 10 | egrep "female" | wc -l
 cat wages.csv | cut -d ',' -f 1,2 | tr ',' '\t' | egrep "male" | sort -V | uniq > wages.txt
 
 
-
+val1=$(cat wages.csv | cut -d ',' -f 3,4 | egrep "^16" | sort | head -n 1 | cut -d ',' -f 2)
